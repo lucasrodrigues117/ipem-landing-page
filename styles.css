@@ -1,0 +1,963 @@
+/* Variáveis de cores */
+:root {
+    --primary-blue: #1a3c6e;
+    --secondary-blue: #2c5aa0;
+    --light-blue: #4a7fc1;
+    --dark-gray: #333333;
+    --medium-gray: #666666;
+    --light-gray: #f2f2f2;
+    --white: #ffffff;
+    --black: #000000;
+    --accent: #0077cc;
+}
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+    font-size: 16px; /* Aumentado para melhor legibilidade */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Aumentado para melhor espaçamento */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-weight: 500; /* Aumentado para melhor visibilidade */
+}
+
+a:hover {
+    color: var(--secondary-blue);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Garante que não haja espaços indesejados */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.8em; /* Aumentado para melhor espaçamento */
+    font-weight: 600;
+    line-height: 1.3; /* Aumentado para melhor legibilidade */
+    color: var(--dark-gray);
+}
+
+h1 {
+    font-size: 3rem; /* Aumentado para melhor hierarquia visual */
+}
+
+h2 {
+    font-size: 2.5rem; /* Aumentado para melhor hierarquia visual */
+    text-align: center;
+    margin-bottom: 2rem; /* Aumentado para melhor espaçamento */
+    position: relative;
+    padding-bottom: 0.8rem; /* Aumentado para melhor espaçamento */
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Aumentado para melhor visibilidade */
+    height: 4px; /* Aumentado para melhor visibilidade */
+    background-color: var(--primary-blue);
+}
+
+h3 {
+    font-size: 1.8rem; /* Aumentado para melhor hierarquia visual */
+}
+
+p {
+    margin-bottom: 1.2rem; /* Aumentado para melhor espaçamento */
+    font-size: 1.1rem; /* Aumentado para melhor legibilidade */
+}
+
+section {
+    padding: 5rem 0; /* Aumentado para melhor espaçamento */
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem; /* Aumentado para melhor clicabilidade */
+    border-radius: 6px; /* Aumentado para estilo mais moderno */
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1.1rem; /* Aumentado para melhor legibilidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionado para melhor feedback visual */
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    transform: translateY(-2px); /* Adicionado para melhor feedback visual */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Adicionado para melhor feedback visual */
+}
+
+.btn-secondary {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.btn-secondary:hover {
+    background-color: var(--medium-gray);
+    color: var(--white);
+    transform: translateY(-2px); /* Adicionado para melhor feedback visual */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Adicionado para melhor feedback visual */
+}
+
+.btn-text {
+    color: var(--primary-blue);
+    padding: 0;
+    background: none;
+    text-decoration: underline;
+    font-weight: 600; /* Aumentado para melhor visibilidade */
+}
+
+.btn-text:hover {
+    color: var(--secondary-blue);
+}
+
+/* Aviso de Cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 1.2rem; /* Aumentado para melhor espaçamento */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Adicionado para melhor feedback visual */
+}
+
+.cookie-banner p {
+    margin: 0;
+    padding-right: 1.5rem; /* Aumentado para melhor espaçamento */
+    font-size: 1rem; /* Ajustado para melhor legibilidade */
+}
+
+.cookie-banner button {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem; /* Aumentado para melhor clicabilidade */
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem; /* Ajustado para melhor legibilidade */
+}
+
+.cookie-banner button:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px); /* Adicionado para melhor feedback visual */
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Aumentado para melhor feedback visual */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.top-bar {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 0.8rem 0; /* Aumentado para melhor espaçamento */
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gov-logo img {
+    height: 35px; /* Aumentado para melhor visibilidade */
+}
+
+.accessibility {
+    display: flex;
+    gap: 0.8rem; /* Aumentado para melhor espaçamento */
+}
+
+.accessibility button {
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1rem; /* Aumentado para melhor visibilidade */
+    padding: 0.4rem; /* Aumentado para melhor clicabilidade */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.accessibility button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Adicionado para melhor feedback visual */
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem; /* Aumentado para melhor espaçamento */
+}
+
+.social-media a {
+    color: var(--white);
+    font-size: 1.2rem; /* Aumentado para melhor visibilidade */
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.4rem; /* Aumentado para melhor clicabilidade */
+}
+
+.social-media a:hover {
+    color: var(--light-blue);
+    transform: translateY(-2px); /* Adicionado para melhor feedback visual */
+}
+
+.main-header {
+    padding: 1.5rem 0; /* Aumentado para melhor espaçamento */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 90px; /* Aumentado para melhor visibilidade */
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    padding: 0.8rem 3rem 0.8rem 1.2rem; /* Aumentado para melhor usabilidade */
+    border: 2px solid var(--medium-gray); /* Aumentado para melhor visibilidade */
+    border-radius: 6px; /* Aumentado para estilo mais moderno */
+    width: 300px; /* Aumentado para melhor usabilidade */
+    font-size: 1rem; /* Ajustado para melhor legibilidade */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(26, 60, 110, 0.2); /* Adicionado para melhor feedback visual */
+}
+
+.search-box button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px; /* Aumentado para melhor clicabilidade */
+    background: none;
+    border: none;
+    color: var(--medium-gray);
+    cursor: pointer;
+    font-size: 1.2rem; /* Aumentado para melhor visibilidade */
+    transition: color 0.3s ease;
+}
+
+.search-box button:hover {
+    color: var(--primary-blue);
+}
+
+.main-nav {
+    background-color: var(--primary-blue);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    color: var(--white);
+    padding: 1.2rem 1.8rem; /* Aumentado para melhor clicabilidade */
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem; /* Aumentado para melhor legibilidade */
+}
+
+.main-nav a:hover {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 250px; /* Aumentado para melhor usabilidade */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumentado para melhor feedback visual */
+    z-index: 1;
+    border-radius: 0 0 6px 6px; /* Adicionado para estilo mais moderno */
+    overflow: hidden; /* Garante que o border-radius seja aplicado */
+}
+
+.dropdown-content a {
+    color: var(--dark-gray);
+    padding: 1rem 1.5rem; /* Aumentado para melhor clicabilidade */
+    display: block;
+    font-size: 1rem; /* Ajustado para melhor legibilidade */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Adicionado para melhor separação visual */
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Banner Principal */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x800/2c3e50/ffffff?text=IPEM-SP');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 0; /* Aumentado para melhor impacto visual */
+}
+
+.hero-content {
+    max-width: 900px; /* Aumentado para melhor layout */
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* Aumentado para melhor impacto visual */
+    margin-bottom: 2rem; /* Aumentado para melhor espaçamento */
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adicionado para melhor legibilidade */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Aumentado para melhor legibilidade */
+    margin-bottom: 2.5rem; /* Aumentado para melhor espaçamento */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Adicionado para melhor legibilidade */
+}
+
+/* Destaques */
+.highlights {
+    background-color: var(--light-gray);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumentado para melhor layout */
+    gap: 2.5rem; /* Aumentado para melhor espaçamento */
+}
+
+.highlight-card {
+    background-color: var(--white);
+    border-radius: 10px; /* Aumentado para estilo mais moderno */
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Aumentado para melhor feedback visual */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px); /* Aumentado para melhor feedback visual */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Aumentado para melhor feedback visual */
+}
+
+.card-image img {
+    width: 100%;
+    height: 220px; /* Aumentado para melhor impacto visual */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 2rem; /* Aumentado para melhor espaçamento */
+    flex-grow: 1; /* Permite que o conteúdo cresça para preencher o espaço */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.5rem; /* Aumentado para melhor hierarquia visual */
+    margin-bottom: 1rem; /* Aumentado para melhor espaçamento */
+}
+
+.card-content p {
+    margin-bottom: 1.5rem; /* Aumentado para melhor espaçamento */
+    flex-grow: 1; /* Permite que o parágrafo cresça para preencher o espaço */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: auto; /* Empurra o link para o final do card */
+    font-weight: 600;
+    color: var(--primary-blue);
+    padding: 0.5rem 0; /* Aumentado para melhor clicabilidade */
+    position: relative;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--secondary-blue);
+}
+
+.read-more:hover::after {
+    width: 100%;
+}
+
+/* Serviços */
+.services {
+    background-color: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Aumentado para melhor layout */
+    gap: 2.5rem; /* Aumentado para melhor espaçamento */
+}
+
+.service-item {
+    text-align: center;
+    padding: 2.5rem; /* Aumentado para melhor espaçamento */
+    background-color: var(--light-gray);
+    border-radius: 10px; /* Aumentado para estilo mais moderno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Garante que todos os itens tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item:hover {
+    transform: translateY(-8px); /* Aumentado para melhor feedback visual */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adicionado para melhor feedback visual */
+}
+
+.service-icon {
+    font-size: 3rem; /* Aumentado para melhor visibilidade */
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem; /* Aumentado para melhor espaçamento */
+    height: 80px; /* Altura fixa para alinhamento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-item h3 {
+    margin-bottom: 1rem; /* Aumentado para melhor espaçamento */
+    font-size: 1.5rem; /* Aumentado para melhor hierarquia visual */
+}
+
+.service-item p {
+    margin-bottom: 2rem; /* Aumentado para melhor espaçamento */
+    flex-grow: 1; /* Permite que o parágrafo cresça para preencher o espaço */
+}
+
+/* Informações Úteis */
+.useful-info {
+    background-color: var(--light-gray);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Aumentado para melhor layout */
+    gap: 2.5rem; /* Aumentado para melhor espaçamento */
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: 2rem; /* Aumentado para melhor espaçamento */
+    border-radius: 10px; /* Aumentado para estilo mais moderno */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Aumentado para melhor feedback visual */
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px); /* Adicionado para melhor feedback visual */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Aumentado para melhor feedback visual */
+}
+
+.info-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem; /* Aumentado para melhor espaçamento */
+    padding-bottom: 0.8rem; /* Aumentado para melhor espaçamento */
+    border-bottom: 3px solid var(--light-blue); /* Aumentado para melhor visibilidade */
+    font-size: 1.5rem; /* Aumentado para melhor hierarquia visual */
+}
+
+.info-card p {
+    margin-bottom: 1rem; /* Ajustado para melhor espaçamento */
+}
+
+.info-card strong {
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+/* Newsletter */
+.newsletter {
+    background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 0; /* Aumentado para melhor impacto visual */
+}
+
+.newsletter-content {
+    max-width: 700px; /* Aumentado para melhor layout */
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    color: var(--white);
+    font-size: 2.8rem; /* Aumentado para melhor hierarquia visual */
+}
+
+.newsletter h2::after {
+    background-color: var(--white);
+}
+
+.newsletter p {
+    font-size: 1.3rem; /* Aumentado para melhor legibilidade */
+    margin-bottom: 2rem; /* Aumentado para melhor espaçamento */
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 2.5rem; /* Aumentado para melhor espaçamento */
+    max-width: 600px; /* Aumentado para melhor layout */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem 1.5rem; /* Aumentado para melhor usabilidade */
+    border: none;
+    border-radius: 6px 0 0 6px; /* Aumentado para estilo mais moderno */
+    font-size: 1.1rem; /* Aumentado para melhor legibilidade */
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); /* Adicionado para melhor feedback visual */
+}
+
+.newsletter-form button {
+    border-radius: 0 6px 6px 0; /* Aumentado para estilo mais moderno */
+    padding: 1rem 2rem; /* Aumentado para melhor clicabilidade */
+    font-size: 1.1rem; /* Aumentado para melhor legibilidade */
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.footer-main {
+    padding: 5rem 0 3rem; /* Aumentado para melhor espaçamento */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Aumentado para melhor layout */
+    gap: 3rem; /* Aumentado para melhor espaçamento */
+}
+
+.footer-col h3 {
+    color: var(--white);
+    margin-bottom: 1.8rem; /* Aumentado para melhor espaçamento */
+    padding-bottom: 0.8rem; /* Aumentado para melhor espaçamento */
+    border-bottom: 2px solid var(--medium-gray); /* Aumentado para melhor visibilidade */
+    font-size: 1.5rem; /* Aumentado para melhor hierarquia visual */
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem; /* Aumentado para melhor espaçamento */
+}
+
+.footer-col a {
+    color: var(--light-gray);
+    font-size: 1.05rem; /* Aumentado para melhor legibilidade */
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col a:hover {
+    color: var(--white);
+    padding-left: 5px; /* Adicionado para melhor feedback visual */
+}
+
+.footer-col p {
+    font-size: 1.05rem; /* Aumentado para melhor legibilidade */
+    margin-bottom: 0.5rem; /* Ajustado para melhor espaçamento */
+}
+
+.footer-bottom {
+    background-color: var(--black);
+    padding: 2rem 0; /* Aumentado para melhor espaçamento */
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Aumentado para melhor espaçamento */
+}
+
+.copyright {
+    font-size: 1rem; /* Aumentado para melhor legibilidade */
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem; /* Aumentado para melhor espaçamento */
+}
+
+.footer-links a {
+    color: var(--light-gray);
+    font-size: 1rem; /* Aumentado para melhor legibilidade */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.back-to-top a {
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Aumentado para melhor espaçamento */
+    font-size: 1rem; /* Aumentado para melhor legibilidade */
+    padding: 0.8rem; /* Adicionado para melhor clicabilidade */
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top a:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1); /* Adicionado para melhor feedback visual */
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav li {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    
+    .dropdown-content {
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+    
+    section {
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .top-bar .container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .main-header .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .search-box input {
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        border-radius: 6px;
+    }
+    
+    .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .back-to-top {
+        margin-top: 1rem;
+    }
+    
+    .back-to-top a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-nav a {
+        padding: 1rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .highlights-grid,
+    .services-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-banner {
+        padding: 5rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* Estilos de acessibilidade */
+.high-contrast {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.high-contrast header,
+.high-contrast .highlight-card,
+.high-contrast .info-card,
+.high-contrast .service-item {
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast p,
+.high-contrast a {
+    color: var(--white);
+}
+
+.high-contrast .btn-primary {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.high-contrast .btn-secondary {
+    background-color: var(--light-gray);
+    color: var(--black);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.highlight-card,
+.service-item,
+.info-card {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.highlight-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.highlight-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.highlight-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.service-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.service-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.service-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.service-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.service-item:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+/* Melhorias de acessibilidade */
+:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}

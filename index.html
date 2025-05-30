@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPEM-SP | Instituto de Pesos e Medidas do Estado de São Paulo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Link de acessibilidade -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
+
+    <!-- Aviso de Cookies -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Este site utiliza cookies estritamente necessários para navegação e melhor desempenho. Ao navegar você aceita, implicitamente, essa condição.</p>
+        <button id="acceptCookies" aria-label="Aceitar cookies">ACEITO</button>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="gov-logo">
+                    <img src="images/ipem_sp_header.png" alt="Governo de São Paulo">
+                </div>
+                <div class="accessibility">
+                    <button title="Aumentar Fonte" aria-label="Aumentar tamanho da fonte"><i class="fas fa-plus"></i></button>
+                    <button title="Diminuir Fonte" aria-label="Diminuir tamanho da fonte"><i class="fas fa-minus"></i></button>
+                    <button title="Contraste" aria-label="Alternar modo de alto contraste"><i class="fas fa-adjust"></i></button>
+                </div>
+                <div class="social-media">
+                    <a href="#" title="Facebook" aria-label="Facebook do IPEM-SP"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram" aria-label="Instagram do IPEM-SP"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter" aria-label="Twitter do IPEM-SP"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="YouTube" aria-label="Canal do YouTube do IPEM-SP"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn do IPEM-SP"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" aria-label="Página inicial do IPEM-SP">
+                        <img src="images/ipem_sp_logo.jpeg" alt="IPEM-SP - Instituto de Pesos e Medidas do Estado de São Paulo">
+                    </a>
+                </div>
+                <div class="search-box">
+                    <form action="#" method="get" role="search">
+                        <label for="search-input" class="sr-only">Pesquisar no site</label>
+                        <input type="text" id="search-input" placeholder="Pesquisa" name="search" aria-label="Campo de pesquisa">
+                        <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Menu principal">
+            <div class="container">
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="main-menu">
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#institucional" aria-haspopup="true" aria-expanded="false">Institucional</a>
+                        <div class="dropdown-content">
+                            <a href="#">História</a>
+                            <a href="#">Missão e Visão</a>
+                            <a href="#">Estrutura Organizacional</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#canais" aria-haspopup="true" aria-expanded="false">Canais de comunicação</a>
+                        <div class="dropdown-content">
+                            <a href="#">Ouvidoria</a>
+                            <a href="#">Fale Conosco</a>
+                            <a href="#">Denúncias</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#cidadao" aria-haspopup="true" aria-expanded="false">Cidadão</a>
+                        <div class="dropdown-content">
+                            <a href="#">Serviços</a>
+                            <a href="#">Direitos do Consumidor</a>
+                            <a href="#">Perguntas Frequentes</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#transparencia" aria-haspopup="true" aria-expanded="false">Transparência</a>
+                        <div class="dropdown-content">
+                            <a href="#">Portal da Transparência</a>
+                            <a href="#">Acesso à Informação</a>
+                            <a href="#">Licitações</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#areas" aria-haspopup="true" aria-expanded="false">Áreas de atuação</a>
+                        <div class="dropdown-content">
+                            <a href="#">Metrologia</a>
+                            <a href="#">Fiscalização</a>
+                            <a href="#">Certificação</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#imprensa" aria-haspopup="true" aria-expanded="false">Sala de imprensa</a>
+                        <div class="dropdown-content">
+                            <a href="#">Notícias</a>
+                            <a href="#">Eventos</a>
+                            <a href="#">Publicações</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="main-content">
+        <!-- Banner Principal -->
+        <section class="hero-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero_banner.jpg');">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Instituto de Pesos e Medidas do Estado de São Paulo</h1>
+                    <p>Garantindo a confiabilidade das medições e a qualidade dos produtos para a sociedade</p>
+                    <a href="#servicos" class="btn btn-primary">Conheça nossos serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destaques -->
+        <section class="highlights">
+            <div class="container">
+                <h2>Destaques</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="card-image">
+                            <img src="images/transformacao_digital.jpg" alt="Transformação Digital na Metrologia">
+                        </div>
+                        <div class="card-content">
+                            <h3>Transformação Digital na Metrologia</h3>
+                            <p>IPEM-SP ministra palestra sobre transformação digital na metrologia 4.0 para equipe da Petrobras</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-image">
+                            <img src="images/aparelho_pressao.jpg" alt="Aparelho de Pressão">
+                        </div>
+                        <div class="card-content">
+                            <h3>Confiabilidade em Aparelhos de Pressão</h3>
+                            <p>O seu aparelho de pressão é confiável? Saiba como verificar e garantir medições precisas</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-image">
+                            <img src="images/certificacao.jpg" alt="Certificação">
+                        </div>
+                        <div class="card-content">
+                            <h3>Certificação de Pessoas</h3>
+                            <p>IPEM-SP divulga vídeo sobre Certificação de Pessoas e os benefícios para profissionais e empresas</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-image">
+                            <img src="images/seminario_gnl.jpg" alt="Seminário GNL">
+                        </div>
+                        <div class="card-content">
+                            <h3>Seminário sobre Gás Natural Liquefeito</h3>
+                            <p>São Paulo sedia Seminário sobre Gás Natural Liquefeito com foco na transição energética</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2>Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Unidades de Atendimento</h3>
+                        <p>Encontre a unidade mais próxima de você</p>
+                        <a href="#" class="btn btn-secondary">Localizar</a>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Documentos e Formulários</h3>
+                        <p>Acesse documentos e formulários necessários</p>
+                        <a href="#" class="btn btn-secondary">Acessar</a>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Verificação e Calibração</h3>
+                        <p>Solicite serviços de verificação e calibração</p>
+                        <a href="#" class="btn btn-secondary">Solicitar</a>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Protocolo Eletrônico</h3>
+                        <p>Envie documentos e solicitações online</p>
+                        <a href="#" class="btn btn-secondary">Enviar</a>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Área do Empresário</h3>
+                        <p>Serviços exclusivos para empresas</p>
+                        <a href="#" class="btn btn-secondary">Acessar</a>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Taxas e Pagamentos</h3>
+                        <p>Consulte valores e realize pagamentos</p>
+                        <a href="#" class="btn btn-secondary">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações Úteis -->
+        <section class="useful-info">
+            <div class="container">
+                <h2>Informações Úteis</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Atendimento Geral</h3>
+                        <p><strong>Telefone:</strong> 11 3581-2000</p>
+                        <p><strong>Serviço de protocolo:</strong> Funciona na Sede do IPEM-SP, das 9h às 16h</p>
+                        <p><strong>E-mail:</strong> protocolo@ipem.sp.gov.br</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Ouvidoria</h3>
+                        <p><strong>Telefone:</strong> 0800 013 05 22 (Estado de São Paulo)</p>
+                        <p><strong>Outros Estados:</strong> 11 3581-2235 / 11 3581-2221</p>
+                        <p><strong>E-mail:</strong> ouvidoria@ipem.sp.gov.br</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Horário de Funcionamento</h3>
+                        <p>Segunda a sexta, exceto feriados e emendas</p>
+                        <p>Das 8h às 17h</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Endereço</h3>
+                        <p>Rua Santa Cruz, 1922 - Vila Gumercindo</p>
+                        <p>São Paulo - SP</p>
+                        <a href="#" class="btn btn-text">Ver no mapa</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Fique por dentro das novidades</h2>
+                    <p>Cadastre-se para receber informações, notícias e atualizações do IPEM-SP</p>
+                    <form action="#" method="post" class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Seu e-mail</label>
+                        <input type="email" id="newsletter-email" placeholder="Seu e-mail" required aria-label="Digite seu e-mail para receber novidades">
+                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Institucional</h3>
+                        <ul>
+                            <li><a href="#">História</a></li>
+                            <li><a href="#">Missão e Visão</a></li>
+                            <li><a href="#">Estrutura Organizacional</a></li>
+                            <li><a href="#">Legislação</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Serviços</h3>
+                        <ul>
+                            <li><a href="#">Para Cidadãos</a></li>
+                            <li><a href="#">Para Empresas</a></li>
+                            <li><a href="#">Verificação e Calibração</a></li>
+                            <li><a href="#">Certificação</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Canais</h3>
+                        <ul>
+                            <li><a href="#">Ouvidoria</a></li>
+                            <li><a href="#">Fale Conosco</a></li>
+                            <li><a href="#">Denúncias</a></li>
+                            <li><a href="#">Transparência</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contato</h3>
+                        <p>Rua Santa Cruz, 1922</p>
+                        <p>Vila Gumercindo - São Paulo - SP</p>
+                        <p>Telefone: 11 3581-2000</p>
+                        <p>E-mail: protocolo@ipem.sp.gov.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>© 2025 IPEM-SP. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Mapa do Site</a>
+                </div>
+                <div class="back-to-top">
+                    <a href="#" id="backToTop">
+                        <i class="fas fa-arrow-up"></i> Voltar ao topo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
