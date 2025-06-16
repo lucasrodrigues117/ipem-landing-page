@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Link de acessibilidade -->
     <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
 
     <!-- Aviso de Cookies -->
     <div class="cookie-banner" id="cookieBanner">
-        <p>Este site utiliza cookies estritamente necessários para navegação e melhor desempenho. Ao navegar você aceita, implicitamente, essa condição.</p>
+        <p>Este site utiliza cookies estritamente necessários para navegação e melhor desempenho. Ao navegar você
+            aceita, implicitamente, essa condição.</p>
         <button id="acceptCookies" aria-label="Aceitar cookies">ACEITO</button>
     </div>
 
@@ -22,18 +25,26 @@
         <div class="top-bar">
             <div class="container">
                 <div class="gov-logo">
-                    <img src="images/ipem_sp_header.png" alt="Governo de São Paulo">
+                    <a href="https://sp.gov.br/sp" target="_blank">
+                        <img src="images/ipem_sp_header.png" alt="Governo de São Paulo">
+                    </a>
                 </div>
                 <div class="accessibility">
-                    <button title="Aumentar Fonte" aria-label="Aumentar tamanho da fonte"><i class="fas fa-plus"></i></button>
-                    <button title="Diminuir Fonte" aria-label="Diminuir tamanho da fonte"><i class="fas fa-minus"></i></button>
-                    <button title="Contraste" aria-label="Alternar modo de alto contraste"><i class="fas fa-adjust"></i></button>
+                    <button title="Aumentar Fonte" aria-label="Aumentar tamanho da fonte"><i
+                            class="fas fa-plus"></i></button>
+                    <button title="Diminuir Fonte" aria-label="Diminuir tamanho da fonte"><i
+                            class="fas fa-minus"></i></button>
+                    <button title="Contraste" aria-label="Alternar modo de alto contraste"><i
+                            class="fas fa-adjust"></i></button>
                 </div>
                 <div class="social-media">
-                    <a href="#" title="Facebook" aria-label="Facebook do IPEM-SP"><i class="fab fa-facebook"></i></a>
-                    <a href="#" title="Instagram" aria-label="Instagram do IPEM-SP"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="Twitter" aria-label="Twitter do IPEM-SP"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="YouTube" aria-label="Canal do YouTube do IPEM-SP"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/governosp/" title="Facebook" aria-label="Facebook do IPEM-SP"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/governosp/" title="Instagram"
+                        aria-label="Instagram do IPEM-SP"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/governosp/" title="X (Twitter)" aria-label="X do IPEM-SP">X</a>
+                    <a href="#" title="YouTube" aria-label="Canal do YouTube do IPEM-SP"><i
+                            class="fab fa-youtube"></i></a>
                     <a href="#" title="LinkedIn" aria-label="LinkedIn do IPEM-SP"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
@@ -42,21 +53,24 @@
             <div class="container">
                 <div class="logo">
                     <a href="index.html" aria-label="Página inicial do IPEM-SP">
-                        <img src="images/ipem_sp_logo.jpeg" alt="IPEM-SP - Instituto de Pesos e Medidas do Estado de São Paulo">
+                        <img src="images/ipem_sp_logo.jpeg"
+                            alt="IPEM-SP - Instituto de Pesos e Medidas do Estado de São Paulo">
                     </a>
                 </div>
                 <div class="search-box">
                     <form action="#" method="get" role="search">
                         <label for="search-input" class="sr-only">Pesquisar no site</label>
-                        <input type="text" id="search-input" placeholder="Pesquisa" name="search" aria-label="Campo de pesquisa">
+                        <input type="text" id="search-input" placeholder="Pesquisa" name="search"
+                            aria-label="Campo de pesquisa">
                         <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
             </div>
         </div>
         <nav class="main-nav" aria-label="Menu principal">
-            <div class="container">
-                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menu">
+            <div class="mega-menu">
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="main-menu"
+                    aria-label="Abrir menu">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul id="main-menu">
@@ -117,7 +131,8 @@
     <!-- Conteúdo principal -->
     <main id="main-content">
         <!-- Banner Principal -->
-        <section class="hero-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero_banner.jpg');">
+        <section class="hero-banner"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero_banner.jpg');">
             <div class="container">
                 <div class="hero-content">
                     <h1>Instituto de Pesos e Medidas do Estado de São Paulo</h1>
@@ -138,7 +153,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Transformação Digital na Metrologia</h3>
-                            <p>IPEM-SP ministra palestra sobre transformação digital na metrologia 4.0 para equipe da Petrobras</p>
+                            <p>IPEM-SP ministra palestra sobre transformação digital na metrologia 4.0 para equipe da
+                                Petrobras</p>
                             <a href="#" class="read-more">Leia mais</a>
                         </div>
                     </div>
@@ -148,7 +164,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Confiabilidade em Aparelhos de Pressão</h3>
-                            <p>O seu aparelho de pressão é confiável? Saiba como verificar e garantir medições precisas</p>
+                            <p>O seu aparelho de pressão é confiável? Saiba como verificar e garantir medições precisas
+                            </p>
                             <a href="#" class="read-more">Leia mais</a>
                         </div>
                     </div>
@@ -158,7 +175,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Certificação de Pessoas</h3>
-                            <p>IPEM-SP divulga vídeo sobre Certificação de Pessoas e os benefícios para profissionais e empresas</p>
+                            <p>IPEM-SP divulga vídeo sobre Certificação de Pessoas e os benefícios para profissionais e
+                                empresas</p>
                             <a href="#" class="read-more">Leia mais</a>
                         </div>
                     </div>
@@ -168,8 +186,30 @@
                         </div>
                         <div class="card-content">
                             <h3>Seminário sobre Gás Natural Liquefeito</h3>
-                            <p>São Paulo sedia Seminário sobre Gás Natural Liquefeito com foco na transição energética</p>
+                            <p>São Paulo sedia Seminário sobre Gás Natural Liquefeito com foco na transição energética
+                            </p>
                             <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-image">
+                            <img src="images/aparelho_pressao.jpg" alt="Medida de Energia Elétrica">
+                        </div>
+                        <div class="card-content">
+                            <h3>Visitas Guiadas</h3>
+                            <p>Conheça o projeto de Visitias Guiadas do Programa Saber IPEM
+                            </p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-image">
+                            <img src="images/certificacao.jpg" alt="Medida de Energia Elétrica">
+                        </div>
+                        <div class="card-content">
+                            <h3>Iluminação Pública</h3>
+                            <p>Ipem-SP marca presença em evento sobre iluminação pública e cidades inteligentes em Campinas</p>
+                            <a href="#" class="read-more">Leia Mais</a>
                         </div>
                     </div>
                 </div>
@@ -261,6 +301,18 @@
                         <p>São Paulo - SP</p>
                         <a href="#" class="btn btn-text">Ver no mapa</a>
                     </div>
+                    <div class="info-card">
+                        <h3>Agendamento de Serviços</h3>
+                        <p>Verificação volumétrica</p>
+                        <p>Verificação de balanças</p>
+                        <p>Verificação de taxímetos</p>
+                        <a href="#" class="btn btn-text">Agende aqui</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Acesso à informação</h3>
+                        <p><strong>Telefone:</strong> 11 3581-2235</p>
+                        <p>Soliciatções relacioandas à Lei de Acesso à Informação podem ser feitas por este canal</p>
+                        <p><strong>Email:</strong>ouvidoria@ipem.sp.gov.br</p>
                 </div>
             </div>
         </section>
@@ -273,7 +325,8 @@
                     <p>Cadastre-se para receber informações, notícias e atualizações do IPEM-SP</p>
                     <form action="#" method="post" class="newsletter-form">
                         <label for="newsletter-email" class="sr-only">Seu e-mail</label>
-                        <input type="email" id="newsletter-email" placeholder="Seu e-mail" required aria-label="Digite seu e-mail para receber novidades">
+                        <input type="email" id="newsletter-email" placeholder="Seu e-mail" required
+                            aria-label="Digite seu e-mail para receber novidades">
                         <button type="submit" class="btn btn-primary">Inscrever-se</button>
                     </form>
                 </div>
@@ -323,25 +376,51 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="copyright">
-                    <p>© 2025 IPEM-SP. Todos os direitos reservados.</p>
+        <html>
+
+        <head>
+            <link rel="stylesheet" type="text/css"
+                href="https://www.saopaulo.sp.gov.br/barra-govsp/css/rodape-padrao-govsp.min.css">
+        </head>
+
+        <body>
+            <section id="govsp-rodape">
+                <div class="container-sp">
+                    <section class="sessao-botoes">
+                        <div class="linha-botoes">
+                        <div class="coluna-4">
+                            <a href="https://www.ouvidoria.sp.gov.br/Portal/Default.aspx"
+                                class="btn btn-model">Ouvidoria</a>
+                        </div>
+
+                        <div class="coluna-4">
+                            <a href="http://www.transparencia.sp.gov.br/" class="btn btn-model">Transparência</a>
+                        </div>
+
+                        <div class="coluna-4">
+                            <a href="http://www.sic.sp.gov.br/" class="btn btn-model">SIC</a>
+                        </div>
+                    </div>
+                    </section>
+                    
                 </div>
-                <div class="footer-links">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Mapa do Site</a>
+
+                <div class="container rodape">
+                    <div class="logo-rodape">
+                        <a href="https://www.saopaulo.sp.gov.br/">
+                            <img src="https://www.saopaulo.sp.gov.br/barra-govsp/img/logo-rodape-governo-do-estado-sp.png"
+                                alt="site do Governo de São Paulo" width="206" height="38">
+                        </a>
+                    </div>
+
                 </div>
-                <div class="back-to-top">
-                    <a href="#" id="backToTop">
-                        <i class="fas fa-arrow-up"></i> Voltar ao topo
-                    </a>
-                </div>
-            </div>
-        </div>
+            </section>
+        </body>
+
+        </html>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

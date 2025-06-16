@@ -18,12 +18,26 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-gray);
     background-color: var(--white);
     font-size: 16px; /* Aumentado para melhor legibilidade */
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
 }
 
 .container {
@@ -246,7 +260,7 @@ header {
 }
 
 .main-header {
-    padding: 1.5rem 0; /* Aumentado para melhor espaçamento */
+    padding:  1.rem 0; /* Aumentado para melhor espaçamento */
 }
 
 .main-header .container {
@@ -298,6 +312,10 @@ header {
 
 .main-nav {
     background-color: var(--primary-blue);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-nav ul {
@@ -323,11 +341,18 @@ header {
 .main-nav a:hover {
     background-color: var(--secondary-blue);
     color: var(--white);
+    height: 87%;
 }
 
 /* Dropdown Menu */
 .dropdown {
     position: relative;
+}
+
+.mega-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dropdown-content {
@@ -616,6 +641,8 @@ header {
 footer {
     background-color: var(--dark-gray);
     color: var(--white);
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .footer-main {
@@ -707,6 +734,62 @@ footer {
 .back-to-top a:hover {
     color: var(--white);
     background-color: rgba(255, 255, 255, 0.1); /* Adicionado para melhor feedback visual */
+}
+
+#govsp-rodape {
+  height: auto;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+section.sessao-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10px;
+    padding: 0;
+}
+
+/* Estica os botões e distribui com espaço entre eles */
+.linha-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+
+}
+
+.coluna-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0;                  /* Faz cada coluna ocupar o mesmo espaço */
+}
+
+/* Estilização básica do botão */
+.btn-model {
+    padding: 16px 0;
+    width: 350px;                 /* Largura fixa igual à da imagem */
+    background-color: #274167;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    text-align: center;
+    border: none;
+    transition: background 0.3s;
+}
+
+/* Container externo centralizado */
+.container-sp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sp-breadcrump {
+    display: none !important;
 }
 
 /* Responsividade */
