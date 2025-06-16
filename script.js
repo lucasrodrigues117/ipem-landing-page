@@ -1,39 +1,39 @@
 // Script para funcionalidades interativas da landing page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Funcionalidade do botão de cookies
     const cookieBanner = document.getElementById('cookieBanner');
     const acceptCookies = document.getElementById('acceptCookies');
-    
+
     if (acceptCookies) {
-        acceptCookies.addEventListener('click', function() {
+        acceptCookies.addEventListener('click', function () {
             cookieBanner.style.opacity = '0';
-            setTimeout(function() {
+            setTimeout(function () {
                 cookieBanner.style.display = 'none';
             }, 300);
             // Salvar a preferência em localStorage
             localStorage.setItem('cookiesAccepted', 'true');
         });
     }
-    
+
     // Verificar se os cookies já foram aceitos
     if (localStorage.getItem('cookiesAccepted') === 'true') {
         cookieBanner.style.display = 'none';
     }
-    
+
     // Funcionalidade de voltar ao topo
     const backToTop = document.getElementById('backToTop');
-    
+
     if (backToTop) {
         // Mostrar/ocultar botão de voltar ao topo com base na rolagem
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.pageYOffset > 300) {
                 backToTop.classList.add('show');
             } else {
                 backToTop.classList.remove('show');
             }
         });
-        
-        backToTop.addEventListener('click', function(e) {
+
+        backToTop.addEventListener('click', function (e) {
             e.preventDefault();
             window.scrollTo({
                 top: 0,
@@ -41,18 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+
     // Funcionalidade de acessibilidade - tamanho da fonte
     const increaseFontBtn = document.querySelector('.accessibility button:nth-child(1)');
     const decreaseFontBtn = document.querySelector('.accessibility button:nth-child(2)');
     const contrastBtn = document.querySelector('.accessibility button:nth-child(3)');
-    
+
     // Recuperar tamanho da fonte salvo
     let fontSize = localStorage.getItem('fontSize') ? parseInt(localStorage.getItem('fontSize')) : 16;
     document.body.style.fontSize = fontSize + 'px';
-    
+
     if (increaseFontBtn) {
-        increaseFontBtn.addEventListener('click', function() {
+        increaseFontBtn.addEventListener('click', function () {
             if (fontSize < 24) { // Limite máximo
                 fontSize += 1;
                 document.body.style.fontSize = fontSize + 'px';
@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     if (decreaseFontBtn) {
-        decreaseFontBtn.addEventListener('click', function() {
+        decreaseFontBtn.addEventListener('click', function () {
             if (fontSize > 12) { // Limite mínimo
                 fontSize -= 1;
                 document.body.style.fontSize = fontSize + 'px';
@@ -78,52 +78,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Funcionalidade de contraste
-    let highContrast = localStorage.getItem('highContrast') === 'true';
-    
-    // Aplicar contraste salvo
-    if (highContrast) {
-        document.body.classList.add('high-contrast');
-    }
-    
-    if (contrastBtn) {
-        contrastBtn.addEventListener('click', function() {
-            highContrast = !highContrast;
-            
-            if (highContrast) {
-                document.body.classList.add('high-contrast');
-                localStorage.setItem('highContrast', 'true');
-                showFeedback('Alto contraste ativado');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            // Salvar preferência no localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'true');
             } else {
-                document.body.classList.remove('high-contrast');
-                localStorage.setItem('highContrast', 'false');
-                showFeedback('Alto contraste desativado');
+                localStorage.setItem('darkMode', 'false');
             }
         });
+
+        // Aplicar modo escuro salvo ao carregar a página
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
     }
-    
     // Adicionar classe ativa ao menu atual
     const currentLocation = window.location.href;
     const menuItems = document.querySelectorAll('.main-nav a');
-    
+
     menuItems.forEach(item => {
         if (item.href === currentLocation) {
             item.classList.add('active');
             item.setAttribute('aria-current', 'page');
         }
     });
-    
+
     // Menu mobile
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainMenu = document.getElementById('main-menu');
-    
+
     if (mobileMenuToggle && mainMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             const expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !expanded);
             mainMenu.classList.toggle('show');
-            
+
             // Alternar ícone
             const icon = this.querySelector('i');
             if (icon.classList.contains('fa-bars')) {
@@ -135,21 +131,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Melhorar acessibilidade dos dropdowns
     const dropdowns = document.querySelectorAll('.dropdown');
-    
+
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
         const content = dropdown.querySelector('.dropdown-content');
-        
+
         // Adicionar suporte a teclado
-        link.addEventListener('keydown', function(e) {
+        link.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 const expanded = this.getAttribute('aria-expanded') === 'true';
                 this.setAttribute('aria-expanded', !expanded);
-                
+
                 if (!expanded) {
                     content.style.display = 'block';
                     const firstLink = content.querySelector('a');
@@ -159,22 +155,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-        
+
         // Fechar dropdown ao pressionar Escape
-        dropdown.addEventListener('keydown', function(e) {
+        dropdown.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 link.setAttribute('aria-expanded', 'false');
                 content.style.display = 'none';
                 link.focus();
             }
         });
-        
+
         // Gerenciar foco dentro do dropdown
-        content.addEventListener('keydown', function(e) {
+        content.addEventListener('keydown', function (e) {
             if (e.key === 'Tab' && !e.shiftKey) {
                 const links = content.querySelectorAll('a');
                 const lastLink = links[links.length - 1];
-                
+
                 if (document.activeElement === lastLink) {
                     link.setAttribute('aria-expanded', 'false');
                     content.style.display = 'none';
@@ -182,48 +178,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Animação de elementos ao entrar na viewport
-    const animateOnScroll = function() {
+    const animateOnScroll = function () {
         const elements = document.querySelectorAll('.highlight-card, .service-item, .info-card, .hero-content');
-        
+
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
+
             if (elementPosition < windowHeight - 50) {
                 element.classList.add('visible');
             }
         });
     };
-    
+
     // Executar uma vez na carga da página
     animateOnScroll();
-    
+
     // Executar durante a rolagem
     window.addEventListener('scroll', animateOnScroll);
-    
+
     // Função para mostrar feedback visual
     function showFeedback(message) {
         // Verificar se já existe um feedback
         let feedback = document.querySelector('.feedback-message');
-        
+
         if (!feedback) {
             feedback = document.createElement('div');
             feedback.className = 'feedback-message';
             document.body.appendChild(feedback);
         }
-        
+
         // Atualizar mensagem e mostrar
         feedback.textContent = message;
         feedback.classList.add('show');
-        
+
         // Ocultar após 2 segundos
-        setTimeout(function() {
+        setTimeout(function () {
             feedback.classList.remove('show');
         }, 2000);
     }
-    
+
     // Adicionar estilos para o feedback
     const style = document.createElement('style');
     style.textContent = `
@@ -310,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
-    
+
     // Adicionar classe para mobile-menu-toggle
     if (!document.querySelector('.mobile-menu-toggle')) {
         const nav = document.querySelector('.main-nav .container');

@@ -416,8 +416,10 @@ header {
 }
 
 /* Destaques */
+
+
 .highlights {
-    background-color: var(--light-gray);
+    background-color: rgb(220, 220, 220);
 }
 
 .highlights-grid {
@@ -495,7 +497,7 @@ header {
 
 /* Serviços */
 .services {
-    background-color: var(--white);
+    background-color: rgb(220, 220, 220);
 }
 
 .services-grid {
@@ -543,7 +545,7 @@ header {
 
 /* Informações Úteis */
 .useful-info {
-    background-color: var(--light-gray);
+    background-color: rgb(220, 220, 220);
 }
 
 .info-grid {
@@ -1043,4 +1045,31 @@ section.sessao-botoes {
 
 .skip-to-content:focus {
     top: 0;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .useful-info, 
+.dark-mode .services, 
+.dark-mode .highlights {
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+.dark-mode .Destaques-title,
+.dark-mode .Servicos-Title,
+.dark-mode .Informacoes-Title {
+  color: rgb(235, 234, 234);
+}
+
+.services-grid, .highlight-card, .container {
+    color: #000000;
+}
+
+.footer-col {
+    color: white;
 }
