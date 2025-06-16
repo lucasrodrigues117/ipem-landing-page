@@ -1073,3 +1073,11 @@ body.dark-mode {
 .footer-col {
     color: white;
 }
+
+.dark-mode .hero-content {
+    color: white;
+}
+
+.hero-content {
+    color: white;
+}
