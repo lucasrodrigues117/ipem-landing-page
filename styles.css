@@ -375,7 +375,7 @@ header {
 }
 
 .dropdown-content a:last-child {
-    border-bottom: none;
+    border-bottom: none;;
 }
 
 .dropdown-content a:hover {
