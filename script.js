@@ -42,42 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Funcionalidade de acessibilidade - tamanho da fonte
-    const increaseFontBtn = document.querySelector('.accessibility button:nth-child(1)');
-    const decreaseFontBtn = document.querySelector('.accessibility button:nth-child(2)');
-    const contrastBtn = document.querySelector('.accessibility button:nth-child(3)');
-
-    // Recuperar tamanho da fonte salvo
-    let fontSize = localStorage.getItem('fontSize') ? parseInt(localStorage.getItem('fontSize')) : 16;
-    document.body.style.fontSize = fontSize + 'px';
-
-    if (increaseFontBtn) {
-        increaseFontBtn.addEventListener('click', function () {
-            if (fontSize < 24) { // Limite máximo
-                fontSize += 1;
-                document.body.style.fontSize = fontSize + 'px';
-                localStorage.setItem('fontSize', fontSize);
-                // Feedback visual
-                showFeedback('Tamanho da fonte aumentado');
-            } else {
-                showFeedback('Tamanho máximo da fonte atingido');
-            }
-        });
-    }
-
-    if (decreaseFontBtn) {
-        decreaseFontBtn.addEventListener('click', function () {
-            if (fontSize > 12) { // Limite mínimo
-                fontSize -= 1;
-                document.body.style.fontSize = fontSize + 'px';
-                localStorage.setItem('fontSize', fontSize);
-                // Feedback visual
-                showFeedback('Tamanho da fonte diminuído');
-            } else {
-                showFeedback('Tamanho mínimo da fonte atingido');
-            }
-        });
-    }
 
     // Funcionalidade de contraste
     const darkModeToggle = document.getElementById('darkModeToggle');
