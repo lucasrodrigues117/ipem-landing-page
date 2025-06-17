@@ -315,7 +315,7 @@ header {
     height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
 }
 
 .main-nav ul {
@@ -330,9 +330,9 @@ header {
 }
 
 .main-nav a {
-    display: block;
+    display: flex;
     color: var(--white);
-    padding: 1.2rem 1.8rem; /* Aumentado para melhor clicabilidade */
+    padding: 10px; /* Aumentado para melhor clicabilidade */
     font-weight: 500;
     transition: background-color 0.3s ease;
     font-size: 1.1rem; /* Aumentado para melhor legibilidade */
