@@ -7,6 +7,8 @@
     <title>IPEM-SP | Instituto de Pesos e Medidas do Estado de São Paulo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -139,9 +141,12 @@
             style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero_banner.jpg');">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Instituto de Pesos e Medidas do Estado de São Paulo</h1>
-                    <p>Garantindo a confiabilidade das medições e a qualidade dos produtos para a sociedade</p>
-                    <a href="#servicos" class="btn btn-primary">Conheça nossos serviços</a>
+                    <h1 class="animate__animated animate__fadeInUp">Instituto de Pesos e Medidas do Estado de São Paulo
+                    </h1>
+                    <p class="animate__animated animate__fadeInUp"> Garantindo a confiabilidade das medições e a
+                        qualidade dos produtos para a sociedade</p>
+                    <a href="#servicos" class="btn btn-primary animate__animated animate__fadeInUp">Conheça nossos
+                        serviços</a>
                 </div>
             </div>
         </section>
@@ -326,13 +331,16 @@
         <section class="newsletter">
             <div class="container">
                 <div class="newsletter-content">
-                    <h2>Fique por dentro das novidades</h2>
-                    <p>Cadastre-se para receber informações, notícias e atualizações do IPEM-SP</p>
-                    <form action="#" method="post" class="newsletter-form">
-                        <label for="newsletter-email" class="sr-only">Seu e-mail</label>
+                    <h2 class="animate__animated animate__fadeInUp" data-aos="fade-up">Fique por dentro das novidades</h2>
+                    <p class="newletter-text animate__animated animate__fadeInUp" data-aos="fade-up">Cadastre-se para receber informações,
+                        notícias e atualizações do IPEM-SP</p>
+                    <form action="#" method="post" class="newsletter-form" data-aos="fade-up">
+                        <label for="newsletter-email" class="sr-only animate__animated animate__fadeInUp">Seu
+                            e-mail</label>
                         <input type="email" id="newsletter-email" placeholder="Seu e-mail" required
                             aria-label="Digite seu e-mail para receber novidades">
-                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                        <button type="submit"
+                            class="btn btn-primary animate__animated animate__fadeInUp" data-aos="fade-up">Inscrever-se</button>
                     </form>
                 </div>
             </div>
@@ -425,6 +433,10 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.userway.org/widget.js" data-account="Fg6JuH8nWN"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

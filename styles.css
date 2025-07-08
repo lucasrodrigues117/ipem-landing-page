@@ -639,6 +639,10 @@ header {
     font-size: 1.1rem; /* Aumentado para melhor legibilidade */
 }
 
+.newletter-text {
+    color: white;
+}
+
 /* Rodapé */
 footer {
     background-color: var(--dark-gray);
