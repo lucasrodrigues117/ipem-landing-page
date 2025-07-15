@@ -392,14 +392,20 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x800/2c3e50/ffffff?text=IPEM-SP');
     background-size: cover;
     background-position: center;
+    height: 400px; /* altura desejada */
     color: var(--white);
+    display: flex;
+    justify-content: center;  /* centraliza horizontalmente */
+    align-items: center;      /* centraliza verticalmente */
     text-align: center;
-    padding: 8rem 0; /* Aumentado para melhor impacto visual */
+    padding: 0; /* zera o padding vertical que estava empurrando */
 }
+
 
 .hero-content {
     max-width: 900px; /* Aumentado para melhor layout */
     margin: 0 auto;
+    text-align: center;
 }
 
 .hero-content h1 {
